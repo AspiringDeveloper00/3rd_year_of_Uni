@@ -1,0 +1,75 @@
+
+.wrapper {
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 25px 35px 25px;
+  margin: 0 auto;
+  background-color:#62a3d2;
+	border-radius: 16px;
+}
+.fuser{
+	margin-top:30px;
+}
+.fcode{
+  margin-top:20px;
+	margin-bottom:30px;
+}
+
+em{
+	color:white;
+  margin-left: 35px;
+}
+
+.btnstyle{
+	margin-left:80px;
+	padding-left:50px;
+	padding-right:50px;
+}
+	.checkbox {
+	  margin-bottom: 30px;
+		font-weight: normal;
+
+	}
+
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+.psign{
+	color:#30475e;
+	text-align: center;
+  font-size: 17px;
+}
+
+.plog{
+	text-decoration: underline;
+	font-size:19px;
+  color:white;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+	text-align: center;
+}
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}

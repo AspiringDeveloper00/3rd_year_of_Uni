@@ -1,0 +1,44 @@
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 30px; /* To center it vertically */
+  color: white;
+}
+
+.ploading{
+    color:#62a3d2;
+    font-size: 20px;
+}
+
+.align{
+  text-align: center;
+}
+
+.paybtn{
+  width:40%;
+  height: 300%;
+  background-color:#e64c3c;
+  color:white;
+  letter-spacing:1.5px;
+  border: none;
+}
+
+.paybtn:focus{outline:0;}
+.paybtn:hover{
+  background-color:#c91604;
+}
+.listr1{
+  border-top-left-radius: 16px;
+  border-bottom-left-radius:16px;
+}
+.listr2{
+  border-top-right-radius: 16px;
+  border-bottom-right-radius:16px;
+}

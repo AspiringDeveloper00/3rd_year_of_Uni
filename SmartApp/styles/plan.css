@@ -1,0 +1,12 @@
+th,td{
+  text-align: center;
+}
+
+.l{
+  border-right: solid 1px white;
+}
+
+.m{
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+}

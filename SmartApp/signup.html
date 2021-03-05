@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Home App: Sign up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="scripts/help.js" type="text/javascript" ></script>
+  <script src="scripts/session.js" type="text/javascript" ></script>
+  <script src="scripts/error.js" type="text/javascript" ></script>
+  <link rel="stylesheet" href="styles/all.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="icon" href="favicon/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="description" content="Μια έξυπνη διαδικτυακή εφαρμογή που επιτρέπει στους κατοίκους και τους επισκέπτες του σπιτιού να αλληλεπιδρούν με αυτό καθώς και με εξωτερικές οντότητες όπως delivery και μετακινήσεις την εποχή της πανδημίας του κορονοιού">
+  <meta name="author" content="Έλενα Τζάρα, Αντώνης Καρναβάς">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script>
+  if (sessionStorage.getItem('auth')=="error"){
+    sessionStorage.setItem('auth',"");
+    Swal.fire(
+      'ΣΦΑΛΜΑ',
+      'ΔΕΝ ΕΙΧΑΤΕ ΠΡΟΣΒΑΣΗ ΣΕ ΑΥΤΗ ΤΗ ΣΕΛΙΔΑ, ΚΑΝΤΕ ΠΡΩΤΑ ΕΓΓΡΑΦΗ Ή ΣΥΝΔΕΘΕΙΤΕ ΜΕ ΤΟΝ ΛΟΓΑΡΙΑΣΜΟ ΣΑΣ.',
+      'error');
+  }else if(sessionStorage.getItem('name')!=null){
+      location.href="index.html";
+  }
+  </script>
+  <nav class="navbar navbar-expand navbar-dark" style="background-color:#62a3d2">
+    <div class="container-fluid">
+    <a class="navbar-brand" id="header"> Smart Home App </a>
+  </div>
+  </nav>
+
+<div class="wrapper">
+  <form class="form-signin" action="index.html" >
+    <p class="plog">SIGN UP</p>
+    <em>Δημιούργησε έναν λογαριασμό!</em>
+    <input type="text" class="form-control fuser" id="firstname" placeholder="Όνομα" required="" autofocus="" />
+    <input type="text" class="form-control fuser" id="lastname" placeholder="Επώνυμο" required="" autofocus="" />
+    <input type="text" class="form-control fuser" id="street" placeholder="Οδός" required="" autofocus="" />
+    <input type="email" class="form-control fuser" id="name" placeholder="Email" required="" autofocus="" />
+    <input type="text" class="form-control fuser" id="tel" placeholder="Τηλέφωνο επικοινωνίας" required="" autofocus="" />
+    <input type="password" class="form-control fcode"  name="password" placeholder="Password" required=""/>
+    <button class="btn btn-lg btn-primary btn-block btnstyle" style="margin-left:70px;" onclick="startses()" type="submit">Sign up</button>
+  </form>
+</div>
+
+</body>
+</html>

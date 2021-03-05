@@ -1,0 +1,105 @@
+.listc{
+  background-color: #62a3d2;
+  border-right:1px solid white;
+  text-align:center;
+}
+
+.listr1{
+  border-top-left-radius: 16px;
+  border-bottom-left-radius:16px;
+}
+.listr2{
+  border-top-right-radius: 16px;
+  border-bottom-right-radius:16px;
+}
+.listh{
+  background-color: #30475e;
+  border-right:1px solid white;
+  text-align:center;
+}
+
+.listf{
+  background-color:#e64c3c;
+  border-right:1px solid white;
+  text-align:center;
+}
+
+.pheaderlist{
+  color:white;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+.plast{
+  color:white;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.plist{
+  color:white;
+  letter-spacing:1.5px;
+  margin-bottom: 5px;
+  margin-top:5px;
+}
+.row3{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.row4{
+  margin-top: 1.5%;
+}
+
+.paybtn{
+  width:100%;
+  background-color:#e64c3c ;
+  color:white;
+  letter-spacing:1.5px;
+  padding: 7%;
+  width: 96%;
+  border-color:#dae1e7;
+}
+.paybtn:hover{
+  background-color:#c91604;
+}
+.paybtn:focus{
+  outline:0;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
+input[type=number]:focus{
+  outline:0;
+}
+
+@media (min-width:992px){
+  .pheaderlist .plast{font-size:16px;}
+  .plist {font-size:15px;}
+  .paybtn{font-size:14px;}
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .pheaderlist .plast{font-size:15px;}
+  .plist {font-size:14px;}
+  .paybtn{font-size: 11px;}
+}
+
+
+@media (min-width:576px) and (max-width:767px){
+  .pheaderlist {font-size:13px;}
+  .plist{font-size:12px;}
+  .paybtn{font-size: 11px;}
+  .plast{font-size:12px;}
+}
+
+@media (min-width:1px) and (max-width:575px){
+  .pheaderlist {font-size:11px;}
+  .plist{font-size:10px;}
+  .paybtn{font-size: 9px;}
+  .plast {font-size:11px;}
+}

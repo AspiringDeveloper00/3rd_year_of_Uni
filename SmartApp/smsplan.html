@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Home App: ΕΙΔΟΣ ΜΕΤΑΚΙΝΗΣΗΣ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="scripts/help.js" type="text/javascript" ></script>
+  <script src="scripts/error.js" type="text/javascript" ></script>
+  <script src="scripts/session.js" type="text/javascript" ></script>
+  <link rel="stylesheet" href="styles/all.css">
+  <link rel="stylesheet" href="styles/smsplan.css">
+  <link rel="icon" href="favicon/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="description" content="Μια έξυπνη διαδικτυακή εφαρμογή που επιτρέπει στους κατοίκους και τους επισκέπτες του σπιτιού να αλληλεπιδρούν με αυτό καθώς και με εξωτερικές οντότητες όπως delivery και μετακινήσεις την εποχή της πανδημίας του κορονοιού">
+  <meta name="author" content="Έλενα Τζάρα, Αντώνης Καρναβάς">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script>
+    if(sessionStorage.getItem('name')==null){
+      sessionStorage.setItem('auth','error');
+      location.href="login.html";
+    }
+  </script>
+
+  <nav class="navbar navbar-expand navbar-dark" style="background-color:#62a3d2">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="index.html" id="header"> Smart Home App </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item nav-icons">
+          <a class="nav-link" href="index.html"><img src="Images/home.png" width="25"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="dosms()" style="cursor:pointer;"><img src="Images/information.png" width="25"> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" onclick="logout()" style="cursor:pointer;"><p class="logout">Αποσύνδεση</p></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+<section class="sec">
+  <div id="left"><a> <img class="backimg" src="Images/back.png" onclick="location.href='index.html';" onmouseover="this.src='Images/back2.png';this.style.cursor='pointer'" onmouseout="this.src='Images/back.png'"></a></div>
+  <div id="right"><button type="button" onclick="location.href='plan.html';" class="btn" ><span class="pbtn2">ΠΛΑΝΟ ΗΜΕΡΑΣ</span></button></div>
+</section>
+<section class="sec2" style="text-align:center;">
+<div ><p class="pheader" > ΕΠΙΛΕΞΤΕ ΕΙΔΟΣ ΜΕΤΑΚΙΝΗΣΗΣ: </p></div>
+</section>
+<section class="sec">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1">
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-5 btn-style btn" id="ΦΑΡΜΑΚΕΙΟ/ΓΙΑΤΡΟΣ" onclick="sms(this.id)">
+        <img class="img-style1" src=Images/doctor.png>
+        <p class="pbtn ptext1">ΦΑΡΜΑΚΕΙΟ/ΓΙΑΤΡΟΣ</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-5 btn" id="ΣΟΥΠΕΡΜΑΡΚΕΤ" onclick="sms(this.id)">
+        <img class="img-style2" src=Images/grocery-cart.png>
+        <p class="pbtn ptext2">ΣΟΥΠΕΡΜΑΡΚΕΤ</p>
+      </div>
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1">
+      </div>
+    </div>
+
+    <div class="row row2">
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1">
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-5 btn-style btn" id="ΤΡΑΠΕΖΑ" onclick="sms(this.id)">
+        <img class="img-style3" src=Images/bank.png>
+        <p class="pbtn ptext3">ΤΡΑΠΕΖΑ</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-5 btn" id="ΠΑΡΟΧΗ ΒΟΗΘΕΙΑΣ" onclick="sms(this.id)">
+        <img class="img-style4" src=Images/help2.png>
+        <p class="pbtn ptext4">ΠΑΡΟΧΗ ΒΟΗΘΕΙΑΣ</p>
+      </div>
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1">
+      </div>
+    </div>
+
+
+    <div class="row row2">
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1">
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-5 btn-style btn" id="ΚΗΔΕΙΑ" onclick="sms(this.id)">
+        <img class="img-style5" src=Images/grave.png>
+        <p class="pbtn ptext5">ΚΗΔΕΙΑ</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-4 col-5 btn" id="ΑΤΟΜΙΚΗ ΑΘΛΗΣΗ" onclick="sms(this.id)">
+        <img class="img-style6" src=Images/running.png>
+        <p class="pbtn ptext6">ΑΤΟΜΙΚΗ ΑΘΛΗΣΗ</p>
+      </div>
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-2 col-1 bottom1">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-8 col-10 btn bottom2" id="ΕΡΓΑΣΙΑ" onclick="sms(this.id)">
+        <img class="img-style7" src=Images/working-hours.png>
+        <p class="pbtn ptext7">ΕΡΓΑΣΙΑ</p>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-2 col-1">
+      </div>
+    </div>
+  </div>
+</section>
+<br><br>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+
+</html>

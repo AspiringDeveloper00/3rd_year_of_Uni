@@ -1,0 +1,107 @@
+.radio{
+  margin-left: 10%;
+}
+.card {
+    border: none;
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 35px;
+    padding-bottom: 20px !important
+}
+
+.heading {
+    color: #62a3d2;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    padding-bottom: 3%;
+}
+
+.cell{
+  border: solid 2px #62a3d2;
+
+  }
+
+.text-warning {
+    font-size: 14px;
+    font-weight: bold;
+    color: #62a3d2 !important
+}
+
+.paybtn{
+  width:100%;
+  background-color:#62a3d2 ;
+  color:white;
+  letter-spacing:1.5px;
+  padding: 7%;
+  width: 96%;
+  border-color:#dae1e7;
+}
+.paybtn:hover{
+  background-color:#30475e;
+}
+.paybtn:focus{
+  outline:0;
+}
+.listr1{
+  border-top-left-radius: 16px;
+  border-bottom-left-radius:16px;
+}
+.listr2{
+  border-top-right-radius: 16px;
+  border-bottom-right-radius:16px;
+}
+em{
+  color:#e64c3c;
+  font-size: 13px;
+}
+#cc{
+  width:7%;
+  padding-bottom: 5%;
+  margin-left: 5%;
+}
+#on{
+  padding-bottom: 2.5%;
+}
+
+#center {
+    text-align: center;
+    padding-right: 6%;
+}
+input {
+    border-bottom: 1.5px solid #E8E5D2 !important;
+    border-radius: 0;
+    border: 0
+}
+
+.form-group input:focus {
+    border: 0;
+    outline: 0
+}
+
+.col-sm-5 {
+    padding-left: 90px
+}
+
+.btn1 {
+    background: #62a3d2 ;
+    border: none;
+    border-radius: 30px;
+    margin-top: 14%;
+}
+
+.btn1:focus {
+    box-shadow: none;
+      outline:0;
+}
+ .btn1:hover{  background-color: #30475e;}
+
+.b{text-align: right;}
+
+.logout{
+  text-decoration: underline;
+  margin-bottom: 0px;
+  color: white;
+font-size: 18px;
+}

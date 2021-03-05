@@ -1,0 +1,65 @@
+.pbtn2{
+  font-size:14px;
+  color:white;
+  letter-spacing: 1.5px;
+  margin-top: -4%;
+
+}
+.ptext1{
+margin-top:7%;
+
+}
+
+.ptext2{
+margin-top:7%;
+
+}
+
+.ptext3{
+margin-top:7%;
+
+}
+
+.ptext4{
+margin-top:7%;
+
+}
+
+
+.img-style1{
+  padding-top: 8%;
+  width:45%;
+
+}
+.img-style2{
+  padding-top: 5%;
+  width:48%;
+
+}
+.img-style3{
+  padding-top: 5%;
+  width:48%;
+
+}
+.img-style4{
+  padding-top: 5%;
+  width:48%;
+
+}
+@media (min-width:992px){
+  .pbtn2{font-size:14px;}
+
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .pbtn2{font-size:13px;}
+}
+
+
+@media (min-width:576px) and (max-width:767px){
+  .pbtn2{font-size:12px;}
+}
+
+@media (min-width:1px) and (max-width:575px){
+.pbtn2{font-size: 11px;}
+}
